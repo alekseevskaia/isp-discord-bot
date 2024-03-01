@@ -1,0 +1,12 @@
+[Unit]
+Description=MeetingNotes Discord Bot
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+ExecStart=discord-bot
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,44 @@
+[tool.poetry]
+name = "discord-bot"
+version = "0.1.0"
+description = ""
+authors = [
+    "Andrey Ezhov <ezhandrvlad@ispras.ru>",
+    "Anna Chistyakova <a.chistyakova@ispras.ru>",
+    "Daria Shelepneva <d-d-sh@ispras.ru>",
+    "Ekaterina Kurdenkova <kurdenkova@ispras.ru>",
+    "Elizaveta Kuzmina <kuzminaev@ispras.ru>",
+    "Igor Kochetkov <kochetkov@ispras.ru>",
+    "Irina Alekseevskaia <alekseevskaia@ispras.ru>",
+    "Kirill Kanev <kanev@ispras.ru>",
+    "Konstantin Arkhipenko <arkhipenko@ispras.ru>",
+    "Leonid Starykh <starykh@ispras.ru>",
+    "Mikhail Zykov <mizykov@ispras.ru>",
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+discord = "^2.0.0"
+APScheduler = "^3.9.1"
+
+[tool.poetry.dev-dependencies]
+git-review = "^2.3.1"
+black = "^22.6.0"
+flake8 = "^4.0.1"
+flake8-builtins = "^1.5.3"
+flake8-comprehensions = "^3.10.0"
+flake8-docstrings = "^1.6.0"
+flake8-import-order = "^0.18.1"
+flake8-quotes = "^3.3.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 100
+target-version = ["py38"]
+skip-string-normalization = true
+
+[tool.poetry.scripts]
+discord-bot = "discord_bot.discord_bot:main"
